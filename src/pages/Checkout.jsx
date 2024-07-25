@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useCart } from '../hooks/useCart';
 import './Checkout.css';
 
 const Checkout = () => {
-  const { cart } = useCart();
+  const { cart, clearCart, getCartTotal } = useCart();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,11 +20,13 @@ const Checkout = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Order submitted:', { ...formData, cart });
-    // Here you would typically send this data to a server
+    // typically s-d-t-a server
+    clearCart();
     alert('Order placed successfully!');
+    navigate('/');
   };
 
-  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const total = getCartTotal();
 
   return (
     <div className="checkout">
