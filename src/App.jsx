@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
@@ -25,30 +26,3 @@ function App() {
 }
 
 export default App;
-
-// src/components/layout/Navbar.jsx
-import { Link } from 'react-router-dom';
-
-function Navbar() {
-  return (
-    <nav>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/shop">Shop</Link></li>
-      </ul>
-    </nav>
-  );
-}
-
-export default Navbar;
-
-// src/components/layout/Footer.jsx
-function Footer() {
-  return (
-    <footer>
-      <p>&copy; 2024 React Shop Cart. All rights reserved.</p>
-    </footer>
-  );
-}
-
-export default Footer;
