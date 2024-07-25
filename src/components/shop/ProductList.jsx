@@ -1,13 +1,19 @@
-import ProductCard from './ProductCard';
+import React from 'react';
+import './ProductList.css';
 
-function ProductList({ products }) {
+const ProductList = ({ products }) => {
   return (
     <div className="product-list">
       {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
+        <div key={product.id} className="product-item">
+          <img src={product.image} alt={product.title} />
+          <h3>{product.title}</h3>
+          <p>${product.price.toFixed(2)}</p>
+          <button>Add to Cart</button>
+        </div>
       ))}
     </div>
   );
-}
+};
 
 export default ProductList;
