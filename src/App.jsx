@@ -5,7 +5,10 @@ import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import Cart from './pages/Cart';
+import ProductDetail from './pages/ProductDetail';
+import Checkout from './pages/Checkout';
 import { CartProvider } from './context/CartContext';
+import './App.css';
 
 function App() {
   return (
@@ -13,11 +16,15 @@ function App() {
       <CartProvider>
         <div className="App">
           <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/cart" element={<Cart />} />
-          </Routes>
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/shop" element={<Shop />} />
+              <Route path="/shop/:id" element={<ProductDetail />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/checkout" element={<Checkout />} />
+            </Routes>
+          </main>
           <Footer />
         </div>
       </CartProvider>
