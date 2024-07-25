@@ -1,5 +1,4 @@
-// src/pages/Shop.jsx
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProductList from '../components/shop/ProductList';
 import Cart from '../components/shop/Cart';
 
