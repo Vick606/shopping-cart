@@ -1,162 +1,78 @@
-/* src/components/layout/Navbar.module.css */
 .navbar {
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 1rem 0;
-  }
-  
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.navList {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin-left: 2rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: var(--primary-color);
+}
+
+.cartLink {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.cartLink:hover {
+  background-color: #27ae60;
+}
+
+@media (max-width: 768px) {
   .navContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navList {
-    display: flex;
-    list-style-type: none;
-  }
-  
-  .navItem {
-    margin-left: 2rem;
-  }
-  
-  .navLink {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-  
-  .navLink:hover {
-    color: var(--primary-color);
-  }
-  
-  .cartLink {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-  }
-  
-  /* src/components/shop/ProductCard.module.css */
-  .card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    padding: 1.5rem;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s ease;
+    align-items: flex-start;
   }
-  
-  .card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .image {
+
+  .navList {
+    margin-top: 1rem;
+    flex-direction: column;
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1rem;
   }
-  
-  .title {
-    font-size: 1.2rem;
-    font-weight: 600;
+
+  .navItem {
+    margin-left: 0;
     margin-bottom: 0.5rem;
   }
-  
-  .price {
-    font-size: 1.1rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+
+  .cartLink {
+    display: inline-block;
+    margin-top: 0.5rem;
   }
-  
-  .quantityControl {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-  
-  .quantityButton {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    width: 30px;
-    height: 30px;
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .quantityInput {
-    width: 50px;
-    text-align: center;
-    margin: 0 0.5rem;
-    font-size: 1rem;
-  }
-  
-  /* src/pages/Shop.module.css */
-  .shopContainer {
-    padding: 2rem 0;
-  }
-  
-  .productGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 2rem;
-  }
-  
-  /* src/pages/Cart.module.css */
-  .cartPage {
-    padding: 2rem 0;
-  }
-  
-  .cartItem {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .cartItemImage {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-right: 1rem;
-  }
-  
-  .cartItemDetails {
-    flex-grow: 1;
-  }
-  
-  .cartItemTitle {
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-  
-  .cartItemPrice {
-    color: var(--primary-color);
-  }
-  
-  .cartTotal {
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: right;
-    margin-top: 2rem;
-  }
-  
-  .checkoutButton {
-    background-color: var(--secondary-color);
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-    margin-top: 1rem;
-  }
+}
