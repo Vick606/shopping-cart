@@ -1,28 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/layout/Navbar';
-import Footer from './components/layout/Footer';
-import Home from './pages/Home';
-import Shop from './pages/Shop';
-import Cart from './pages/Cart';
-import { CartProvider } from './context/CartContext';
+import { Link } from 'react-router-dom';
+import { products } from '../../data/products';
 
-function App() {
+function FeaturedProducts() {
+  const featuredProducts = products.slice(0, 3);
+
   return (
-    <Router>
-      <CartProvider>
-        <div className="App">
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/cart" element={<Cart />} />
-          </Routes>
-          <Footer />
-        </div>
-      </CartProvider>
-    </Router>
+    <div className="featured-products">
+      <h2>Featured Products</h2>
+      <div className="product-list">
+        {featuredProducts.map((product) => (
+          <div key={product.id} className="product-card">
+            <img src={product.image} alt={product.name} />
+            <h3>{product.name}</h3>
+            <p>${product.price}</p>
+            <Link to="/shop">Shop Now</Link>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 
-export default App;
+export default FeaturedProducts;
