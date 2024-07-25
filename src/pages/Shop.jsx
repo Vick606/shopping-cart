@@ -33,7 +33,7 @@ function Shop() {
       <h1>Shop</h1>
       <div className="shop-content">
         <ProductList products={products} />
-        <Cart />
+        <CartWidget />
       </div>
     </div>
   );
