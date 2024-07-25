@@ -1,0 +1,39 @@
+.checkout {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .checkout-content {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .order-summary, form {
+    flex: 1;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .total {
+    margin-top: 1rem;
+    text-align: right;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input, textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+  
+  button {
+    align-self: flex-start;
+  }
