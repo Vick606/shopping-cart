@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useCart } from '../context/CartContext';
+import { useCart } from '../hooks/useCart';
 import './Checkout.css';
 
 const Checkout = () => {
