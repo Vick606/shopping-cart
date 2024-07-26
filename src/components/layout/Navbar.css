@@ -47,3 +47,18 @@
 .cart-link.has-items .cart-count {
   background-color: #4CAF50; 
 }
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cart-link.has-items .cart-count {
+  animation: pulse 0.5s;
+}
