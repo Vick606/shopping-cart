@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className="nav-links">
         <Link to="/">Home</Link>
         <Link to="/shop">Shop</Link>
-        <Link to="/cart" className="cart-link">
+        <Link to="/cart" className={`cart-link ${cartItemsCount > 0 ? 'has-items' : ''}`}>
           Cart
           {cartItemsCount > 0 && <span className="cart-count">{cartItemsCount}</span>}
         </Link>
