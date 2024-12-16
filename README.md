@@ -40,7 +40,9 @@ Cowabunga! 🏄‍♂️
 
 ## 🤝 Contributing
 
-Got some gnarly ideas to make ShopWave V1 even more awesome? We're all ears! 👂 Feel free to fork the repo, make your changes, and send us a pull request. Let's make waves together! 🌊
+Got some gnarly ideas to make ShopWave V1 even more awesome? We're all ears! 👂 
+Feel free to fork the repo, make your changes, and send us a pull request. 
+Let's make waves together! 🌊 Updates coming soon.
 
 ## 📜 License
 
